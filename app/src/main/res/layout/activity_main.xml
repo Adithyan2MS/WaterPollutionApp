@@ -31,6 +31,7 @@
         android:layout_width="122dp"
         android:layout_height="113dp"
         android:background="@null"
+        android:onClick="takePhoto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
