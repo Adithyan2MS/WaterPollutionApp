@@ -16,17 +16,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        imageButton5.setOnClickListener{
-            var intent=Intent(Intent.ACTION_GET_CONTENT)
-            intent.setType("image/*")
-
-            startActivityForResult(intent,456)
+        imageButton4.setOnClickListener {
+            var intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+            if (intent.resolveActivity(packageManager) != null) {
+                startActivityForResult(intent, 123)
+            }
         }
-    }
-    fun takePhoto(view: View){
-        val intent= Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-        if(intent.resolveActivity(packageManager)!=null){
-            startActivityForResult(intent,123)
+        imageButton5.setOnClickListener{
+            val intent=Intent(Intent.ACTION_PICK)
+            intent.type="image/*"
+            startActivityForResult(intent,456)
+
         }
     }
 
