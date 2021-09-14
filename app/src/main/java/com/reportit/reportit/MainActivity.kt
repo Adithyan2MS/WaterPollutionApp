@@ -16,7 +16,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        imageButton5.setOnClickListener{
+            var intent=Intent(Intent.ACTION_GET_CONTENT)
+            intent.setType("image/*")
 
+            startActivity(intent)
+        }
     }
     fun takePhoto(view: View){
         val intent= Intent(MediaStore.ACTION_IMAGE_CAPTURE)
