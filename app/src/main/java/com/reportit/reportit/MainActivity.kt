@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
     }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        setContentView(R.layout.add_details)
+        setContentView(R.layout.activity_preview)
         if(requestCode==123){
             var bmp: Bitmap =data?.extras?.get("data") as Bitmap
             imageView.setImageBitmap(bmp)
