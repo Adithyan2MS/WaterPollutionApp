@@ -28,7 +28,6 @@ class PreviewActivity : AppCompatActivity() {
         }
         else if(requestCode==456){
             var image_path= intent.getStringExtra("imagePath");
-
             var fileUri = Uri.parse(image_path)
             imageView.setImageURI(fileUri)
         }

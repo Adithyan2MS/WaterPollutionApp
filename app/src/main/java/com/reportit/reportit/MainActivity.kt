@@ -17,19 +17,20 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-    }
-    fun takePhoto(view: View) {
-        var intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-        if (intent.resolveActivity(packageManager) != null) {
-            startActivityForResult(intent,123)
+        imageButton4.setOnClickListener {
+            var intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+            if (intent.resolveActivity(packageManager) != null) {
+                startActivityForResult(intent, 123)
+            }
+        }
+        imageButton5.setOnClickListener{
+            val intent=Intent(Intent.ACTION_PICK)
+            intent.type="image/*"
+            startActivityForResult(intent,456)
+
         }
     }
 
-    fun pickPhoto(view: View) {
-        var intent=Intent(Intent.ACTION_PICK)
-        intent.type="image/*"
-        startActivityForResult(intent,456)
-    }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         val intent=Intent(this,PreviewActivity::class.java)
@@ -41,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         val byteArray=bstream.toByteArray()
         intent.putExtra("image",byteArray)
 
-        var uri = data!!.data
+        val uri = data.data
         intent.putExtra("imagePath", uri.toString())
 
         startActivity(intent)
