@@ -12,7 +12,7 @@ class PreviewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_preview)
 
-        var intent=getIntent();
+        val intent=getIntent()
 
         if (intent.hasExtra("image")){
             val byteArray = intent.getByteArrayExtra("image")
@@ -20,8 +20,8 @@ class PreviewActivity : AppCompatActivity() {
             imageView.setImageBitmap(bmp)
         }
         else if(intent.hasExtra("imagePath")){
-            var image_path= intent.getStringExtra("imagePath");
-            var fileUri = Uri.parse(image_path)
+            val imgpath= intent.getStringExtra("imagePath")
+            val fileUri = Uri.parse(imgpath)
             imageView.setImageURI(fileUri)
         }
     }
