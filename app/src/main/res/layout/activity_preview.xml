@@ -56,7 +56,9 @@
         tools:layout_editor_absoluteY="438dp" />
 
     <Button
+        android:id="@+id/nextButton"
         android:layout_width="match_parent"
+        android:id="@+id/next_btn"
         android:layout_height="67dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/round_corner"
