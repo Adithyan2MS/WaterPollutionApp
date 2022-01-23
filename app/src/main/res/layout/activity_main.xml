@@ -14,7 +14,7 @@
         android:layout_width="304dp"
         android:layout_height="53dp"
         android:fontFamily="serif"
-        android:text="The Third Eye"
+        android:text="We Clean"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/textWhite"
