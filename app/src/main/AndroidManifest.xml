@@ -3,10 +3,15 @@
     package="com.reportit.reportit">
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
+<<<<<<< HEAD
+=======
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+>>>>>>> 15a718e
 
     <application
         android:usesCleartextTraffic="true"
         android:allowBackup="true"
+        android:usesCleartextTraffic="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
